@@ -28,7 +28,6 @@ class JobsController {
   }
 
   async _persist(profissao, request) {
-    console.log('aqui', profissao)
     profissao.nome = request.input('nome')
 
     await profissao.save()
