@@ -22,12 +22,13 @@ class JobsController {
   }
 
   async update ({params, request, response}) {
-    const profissao = this._persist(Job.findOrFail(params.id), request)
+    const profissao = this._persist(await Job.findOrFail(params.id), request)
 
     return response.status(200).json(profissao)
   }
 
   async _persist(profissao, request) {
+    console.log('aqui', profissao)
     profissao.nome = request.input('nome')
 
     await profissao.save()

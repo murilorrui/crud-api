@@ -22,7 +22,7 @@ class PessoasController {
   }
 
   async update ({params, request, response}) {
-    const pessoa = this._persist(Pessoa.findOrFail(params.id), request)
+    const pessoa = this._persist(await Pessoa.findOrFail(params.id), request)
 
     return response.status(200).json(pessoa)
   }
