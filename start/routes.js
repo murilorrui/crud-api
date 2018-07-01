@@ -17,4 +17,3 @@ const Route = use('Route')
 
 Route.on('/').render('welcome')
 Route.resource('api/pessoas', 'PessoasController').apiOnly()
-Route.resource('api/profissoes', 'JobsController').apiOnly()

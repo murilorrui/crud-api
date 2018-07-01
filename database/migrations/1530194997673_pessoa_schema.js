@@ -7,13 +7,12 @@ class PessoaSchema extends Schema {
     this.create('pessoas', (table) => {
       table.increments()
       table.string('nome')
-      table.string('sobrenome')
       table.string('sexo')
-      table.string('profissao')
-      table.string('formacao')
-      table.string('email')
-      table.string('cidade')
-      table.string('estado')
+      table.string('cpf')
+      table.string('reservista')
+      table.string('dataNascimento')
+      table.string('dataCriacao')
+      table.string('idade')
       table.timestamps()
     })
   }
